@@ -100,9 +100,9 @@ export function CollectionList({ onCollectionsChange }: { onCollectionsChange: (
             <line x1="12" y1="8" x2="12" y2="12" />
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
-          <h3 className="mt-4 text-lg font-semibold">No bookmark collections</h3>
+          <h3 className="mt-4 text-lg font-semibold">暂无书签集合</h3>
           <p className="mb-4 mt-2 text-sm text-muted-foreground">
-            You haven't created any bookmark collections yet. Start creating your first bookmark collection now.
+            你还没有创建任何书签集合，现在开始创建你的第一个书签集合吧。
           </p>
           <div className="flex gap-2">
             <Button
@@ -111,7 +111,7 @@ export function CollectionList({ onCollectionsChange }: { onCollectionsChange: (
               disabled={collections.length > 0}
             >
               <Plus className="mr-2 h-4 w-4" />
-              Create Collection
+              新建集合
             </Button>
             <Button
               variant="default"
@@ -119,7 +119,7 @@ export function CollectionList({ onCollectionsChange }: { onCollectionsChange: (
               disabled={collections.length > 0}
             >
               <Upload className="mr-2 h-4 w-4" />
-              Import Json
+              导入 Json
             </Button>
           </div>
         </div>

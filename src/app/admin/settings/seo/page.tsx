@@ -35,7 +35,7 @@ export default function SeoSettingsPage() {
           ...data
         }));
       } catch (error) {
-        toast.error("Failed to load settings");
+        toast.error("加载设置失败");
       } finally {
         setLoading(false);
       }
@@ -78,7 +78,7 @@ export default function SeoSettingsPage() {
         throw new Error('Please enter website URL');
       }
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Website URL format is incorrect');
+      toast.error(error instanceof Error ? error.message : '网站URL格式不正确');
       return;
     }
 
@@ -114,10 +114,10 @@ export default function SeoSettingsPage() {
 
       revalidateData();
 
-      toast.success("SEO settings saved");
+      toast.success("SEO设置已保存");
     } catch (error) {
       console.error('Failed to save settings:', error);
-      toast.error(error instanceof Error ? error.message : "Failed to save settings");
+      toast.error(error instanceof Error ? error.message : "保存设置失败");
     } finally {
       setLoading(false);
     }
@@ -126,7 +126,7 @@ export default function SeoSettingsPage() {
   return (
     <div className="h-full bg-[#f9f9f9]">
       <Toaster />
-      <AdminHeader title="SEO Settings" />
+      <AdminHeader title="SEO设置" />
 
       <div className="mx-auto px-4 py-12 bg-[#f9f9f9]">
         <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8">
@@ -141,14 +141,14 @@ export default function SeoSettingsPage() {
                     <CardContent className="grid gap-4 p-6">
                       <div className="grid gap-2">
                         <label htmlFor="siteUrl" className="font-medium">
-                          网站 URL
+                          网站地址
                         </label>
                         <Input
                           id="siteUrl"
                           name="siteUrl"
                           value={settings.siteUrl}
                           onChange={handleChange}
-                          placeholder="输入网站完整 URL"
+                          placeholder="请输入网站完整地址"
                         />
                         <p className="text-sm text-muted-foreground">
                           例如：https://pintree.io
@@ -177,7 +177,7 @@ export default function SeoSettingsPage() {
                           name="description"
                           value={settings.description}
                           onChange={handleChange}
-                          placeholder="输入网站描述"
+                          placeholder="请输入网站描述"
                           rows={3}
                         />
                       </div>
@@ -191,7 +191,7 @@ export default function SeoSettingsPage() {
                           name="keywords"
                           value={settings.keywords}
                           onChange={handleChange}
-                          placeholder="输入关键词，用逗号分隔"
+                          placeholder="请输入关键词，用逗号分隔"
                         />
                       </div>
                     </CardContent>
@@ -205,7 +205,7 @@ export default function SeoSettingsPage() {
 
           <div className="flex justify-end">
             <Button type="submit" disabled={loading}>
-              {loading ? "Saving..." : "Save Settings"}
+              {loading ? "保存中..." : "保存设置"}
             </Button>
           </div>
         </form>

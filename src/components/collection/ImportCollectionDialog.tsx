@@ -304,25 +304,26 @@ export function ImportCollectionDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Import Bookmark Collection</DialogTitle>
+          <DialogTitle>导入书签集合</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Collection Name</Label>
+            <Label htmlFor="name">集合名称</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
-              placeholder="Enter collection name"
+              placeholder="请输入集合名称"
               required
+              disabled={loading}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">描述</Label>
             <Textarea
               id="description"
               value={formData.description}
@@ -332,15 +333,16 @@ export function ImportCollectionDialog({
                   description: e.target.value.slice(0, 140),
                 }))
               }
-              placeholder="Enter collection description"
+              placeholder="请输入集合描述"
               rows={3}
               className="resize-none"
               maxLength={140}
+              disabled={loading}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="file">Select JSON File (Max 5MB)</Label>
+            <Label htmlFor="file">选择 JSON 文件（最大 5MB）</Label>
             <div
               {...getRootProps()}
               className={`
@@ -363,9 +365,8 @@ export function ImportCollectionDialog({
                     </span>
                   ) : (
                     <>
-                      <span className="font-medium">Click to upload</span> or
-                      drag and drop file here
-                      <p className="text-xs">Supports JSON files</p>
+                      <span className="font-medium">点击上传</span> 或拖拽文件到此处
+                      <p className="text-xs">支持 JSON 文件</p>
                     </>
                   )}
                 </div>
@@ -379,10 +380,10 @@ export function ImportCollectionDialog({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              取消
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Importing..." : "Import"}
+              {loading ? "导入中..." : "导入"}
             </Button>
           </div>
         </form>

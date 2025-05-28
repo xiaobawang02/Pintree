@@ -89,10 +89,10 @@ export default function LoginPage() {
             className="mb-8"
           />
           <h1 className="text-4xl font-bold mb-6">
-            Welcome to Pintree
+            欢迎来到 Pintree
           </h1>
           <p className="text-xl opacity-90 leading-relaxed">
-            A powerful bookmark management platform to help you better organize and share web resources.
+            一个强大的书签管理平台，帮助你更好地组织和分享网络资源。
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function LoginPage() {
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900">Login to Admin</h2>
-            <p className="mt-2 text-gray-600">Manage your bookmark collections</p>
+            <p className="mt-2 text-gray-600">管理你的书签集合</p>
           </div>
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -121,7 +121,7 @@ export default function LoginPage() {
               <Input
                 name="email"
                 type="email"
-                label="Email Address"
+                label="邮箱地址"
                 required
                 autoComplete="email"
                 className="h-12"
@@ -129,7 +129,7 @@ export default function LoginPage() {
               <Input
                 name="password"
                 type="password"
-                label="Password"
+                label="密码"
                 required
                 autoComplete="current-password"
                 className="h-12"
@@ -172,10 +172,10 @@ export default function LoginPage() {
               {loading ? (
                 <div className="flex items-center justify-center">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                  Logging in...
+                  登录中...
                 </div>
               ) : (
-                "Login"
+                "登录"
               )}
             </Button>
 

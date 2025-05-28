@@ -109,16 +109,16 @@ export function CreateCollectionDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Create Bookmark Collection</DialogTitle>
+          <DialogTitle>新建书签集合</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label>Name</Label>
+            <Label>名称</Label>
             <Input
               value={formData.name}
               onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-              placeholder="Enter collection name"
+              placeholder="请输入集合名称"
               disabled={loading}
             />
           </div>
@@ -158,17 +158,17 @@ export function CreateCollectionDialog({
             </Select>
           </div> */}
           <div className="space-y-2">
-            <Label>Description</Label>
+            <Label>描述</Label>
             <Textarea
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-              placeholder="Enter collection description"
+              placeholder="请输入集合描述"
               disabled={loading}
             />
           </div>
 
           <div className="flex items-center justify-between">
-            <Label>Public Access</Label>
+            <Label>公开访问</Label>
             <Switch
               checked={formData.isPublic}
               onCheckedChange={(checked) => setFormData(prev => ({ ...prev, isPublic: checked }))}
@@ -183,10 +183,10 @@ export function CreateCollectionDialog({
               onClick={() => onOpenChange(false)}
               disabled={loading}
             >
-              Cancel
+              取消
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Creating..." : "Create"}
+              {loading ? "创建中..." : "创建"}
             </Button>
           </div>
         </form>
