@@ -457,18 +457,18 @@ export default function BookmarksPage() {
                     <line x1="12" y1="8" x2="12" y2="12" />
                     <line x1="12" y1="16" x2="12.01" y2="16" />
                   </svg>
-                  <h3 className="mt-4 text-lg font-semibold">No Content</h3>
+                  <h3 className="mt-4 text-lg font-semibold">无内容</h3>
                   <p className="mb-4 mt-2 text-sm text-muted-foreground">
-                    There is no content in the current folder. Start adding your first bookmark or folder.
+                    当前文件夹暂无内容。请添加你的第一个书签或文件夹。
                   </p>
                   <div className="flex gap-2">
                     <Button onClick={() => setIsCreateDialogOpen(true)}>
                       <Plus className="mr-2 h-4 w-4" />
-                      Add Bookmark
+                      新建书签
                     </Button>
                     <Button variant="outline" onClick={() => setIsCreateFolderDialogOpen(true)}>
                       <FolderPlus className="mr-2 h-4 w-4" />
-                      New Folder
+                      新建文件夹
                     </Button>
                   </div>
                 </div>
