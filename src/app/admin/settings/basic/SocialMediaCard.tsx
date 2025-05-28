@@ -18,47 +18,47 @@ import {
     const socialLinks = [
       {
         id: "githubUrl",
-        label: "GitHub URL",
-        placeholder: "https://github.com/yourusername",
+        label: "GitHub 链接",
+        placeholder: "https://github.com/你的用户名",
       },
       {
         id: "twitterUrl",
-        label: "Twitter URL",
-        placeholder: "https://twitter.com/yourusername",
+        label: "Twitter 链接",
+        placeholder: "https://twitter.com/你的用户名",
       },
       {
         id: "discordUrl",
-        label: "Discord URL",
-        placeholder: "https://discord.gg/yourserver",
+        label: "Discord 链接",
+        placeholder: "https://discord.gg/你的服务器",
       },
       {
         id: "youtubeUrl",
-        label: "YouTube Channel Link",
-        placeholder: "https://youtube.com/c/yourchannel",
+        label: "YouTube 频道链接",
+        placeholder: "https://youtube.com/c/你的频道",
       },
-      { id: "weixinUrl", label: "WeChat Official Account Link", placeholder: "WeChat Official Account Link" },
+      { id: "weixinUrl", label: "微信公众号链接", placeholder: "微信公众号链接" },
       {
         id: "weiboUrl",
-        label: "Weibo Homepage Link",
-        placeholder: "https://weibo.com/yourpage",
+        label: "微博主页链接",
+        placeholder: "https://weibo.com/你的主页",
       },
       {
         id: "bilibiliUrl",
-        label: "Bilibili Homepage Link",
-        placeholder: "https://space.bilibili.com/yourpage",
+        label: "Bilibili 主页链接",
+        placeholder: "https://space.bilibili.com/你的主页",
       },
       {
         id: "zhihuUrl",
-        label: "Zhihu Homepage Link",
-        placeholder: "https://zhihu.com/people/yourpage",
+        label: "知乎主页链接",
+        placeholder: "https://zhihu.com/people/你的主页",
       },
     ];
   
     return (
       <Card className="border bg-white">
         <CardHeader className="border-b">
-          <CardTitle>Social Media Links</CardTitle>
-          <CardDescription>Set the social media links displayed in the footer of your website</CardDescription>
+          <CardTitle>社交媒体链接</CardTitle>
+          <CardDescription>设置显示在你网站页脚的社交媒体链接</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4 p-6">
           {socialLinks.map(({ id, label, placeholder }) => (
