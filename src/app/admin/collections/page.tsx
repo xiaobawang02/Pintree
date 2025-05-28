@@ -38,7 +38,7 @@ export default function CollectionsPage() {
               disabled={hasCollections}
             >
               <Plus className="w-4 h-4 mr-2" />
-              New Collection
+              新建集合
             </Button>
             <Button
               variant="outline"
@@ -46,7 +46,7 @@ export default function CollectionsPage() {
               disabled={hasCollections}
             >
               <Upload className="w-4 h-4 mr-2" />
-              Import
+              导入
             </Button>
           </>
         )}

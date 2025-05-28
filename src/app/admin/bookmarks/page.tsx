@@ -366,7 +366,7 @@ export default function BookmarksPage() {
             variant="outline"
           >
             <FolderPlus className="w-4 h-4 mr-2" />
-            New Folder
+            新建文件夹
           </Button>
           
           <Button 
@@ -374,7 +374,7 @@ export default function BookmarksPage() {
             disabled={!selectedCollectionId || loading}
           >
             <Plus className="w-4 h-4 mr-2" />
-            Add Bookmark
+            新建书签
           </Button>
         </div>
       </AdminHeader>

@@ -393,7 +393,7 @@ export function WebsiteSidebar({
             ) : (
               <div className="flex flex-col items-center justify-center px-4 py-8 text-sm text-muted-foreground space-y-2">
                 <Folder className="h-8 w-8 opacity-50" />
-                <span>No folders yet</span>
+                <span>暂无文件夹</span>
               </div>
             )}
           </SidebarMenu>

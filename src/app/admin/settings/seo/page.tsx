@@ -136,22 +136,22 @@ export default function SeoSettingsPage() {
               <div className="space-y-4">
                 {/* 基础 SEO */}
                 <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground font-normal">Basic SEO</p>
+                  <p className="text-sm text-muted-foreground font-normal">基础 SEO</p>
                   <Card className="border bg-white">
                     <CardContent className="grid gap-4 p-6">
                       <div className="grid gap-2">
                         <label htmlFor="siteUrl" className="font-medium">
-                          Website URL
+                          网站 URL
                         </label>
                         <Input
                           id="siteUrl"
                           name="siteUrl"
                           value={settings.siteUrl}
                           onChange={handleChange}
-                          placeholder="Enter website full URL"
+                          placeholder="输入网站完整 URL"
                         />
                         <p className="text-sm text-muted-foreground">
-                          For example: https://pintree.io
+                          例如：https://pintree.io
                         </p>
                       </div>
 
@@ -170,28 +170,28 @@ export default function SeoSettingsPage() {
 
                       <div className="grid gap-2">
                         <label htmlFor="description" className="font-medium">
-                          Website Description
+                          网站描述
                         </label>
                         <Textarea
                           id="description"
                           name="description"
                           value={settings.description}
                           onChange={handleChange}
-                          placeholder="Enter website description"
+                          placeholder="输入网站描述"
                           rows={3}
                         />
                       </div>
 
                       <div className="grid gap-2">
                         <label htmlFor="keywords" className="font-medium">
-                          Keywords
+                          关键词
                         </label>
                         <Input
                           id="keywords"
                           name="keywords"
                           value={settings.keywords}
                           onChange={handleChange}
-                          placeholder="Enter keywords, separated by commas"
+                          placeholder="输入关键词，用逗号分隔"
                         />
                       </div>
                     </CardContent>

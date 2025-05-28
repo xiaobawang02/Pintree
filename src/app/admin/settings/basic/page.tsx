@@ -209,7 +209,14 @@ export default function BasicSettingsPage() {
 
   return (
     <div className="h-full bg-[#f9f9f9]">
-      <AdminHeader title="Basic Settings" />
+      <AdminHeader title="Basic Settings">
+        <Button
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          保存更改
+        </Button>
+      </AdminHeader>
 
       <div className="mx-auto px-4 py-12 bg-[#f9f9f9]">
         <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8">
