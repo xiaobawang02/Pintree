@@ -65,15 +65,6 @@ export default function SeoSettingsPage() {
         if (!url.protocol.startsWith('http')) {
           throw new Error('Website URL must start with http:// or https://');
         }
-        
-        // 验证域名格式
-        const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
-        if (!domainRegex.test(url.hostname)) {
-          throw new Error('请输入有效的域名');
-        }
-
-        // 更新为清理后的 URL
-        settings.siteUrl = cleanUrl;
       } else {
         throw new Error('Please enter website URL');
       }
