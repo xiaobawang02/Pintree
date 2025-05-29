@@ -69,7 +69,7 @@ export default function SeoSettingsPage() {
         // 验证域名格式
         const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
         if (!domainRegex.test(url.hostname)) {
-          throw new Error('Please enter a valid domain');
+          throw new Error('请输入有效的域名');
         }
 
         // 更新为清理后的 URL
