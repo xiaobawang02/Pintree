@@ -83,13 +83,13 @@ export default function LoginPage() {
         <div className="max-w-xl mx-auto flex flex-col justify-center">
           <Image 
             src="/logo.svg"
-            alt="Pintree Logo"
+            alt="书签管理平台 Logo"
             width={40}
             height={40}
             className="mb-8"
           />
           <h1 className="text-4xl font-bold mb-6">
-            欢迎来到 Pintree
+            欢迎来到 书签管理平台
           </h1>
           <p className="text-xl opacity-90 leading-relaxed">
             一个强大的书签管理平台，帮助你更好地组织和分享网络资源。
@@ -104,7 +104,7 @@ export default function LoginPage() {
           <div className="md:hidden text-center mb-8">
             <Image 
               src="/logo.svg"
-              alt="Pintree Logo"
+              alt="书签管理平台 Logo"
               width={60}
               height={60}
               className="mx-auto"
@@ -112,7 +112,7 @@ export default function LoginPage() {
           </div>
 
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Login to Admin</h2>
+            <h2 className="text-3xl font-bold text-gray-900">登录管理员</h2>
             <p className="mt-2 text-gray-600">管理你的书签集合</p>
           </div>
 
@@ -153,7 +153,7 @@ export default function LoginPage() {
                   checked={initializeDatabase}
                   onChange={(e) => setInitializeDatabase(e.target.checked)}
                 />
-                <span className="ml-2 text-sm text-gray-600">Initialize Database</span>
+                <span className="ml-2 text-sm text-gray-600">初始化数据库</span>
               </label>
             </div>
 
