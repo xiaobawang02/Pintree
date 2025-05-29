@@ -62,8 +62,8 @@ export function ImportCollectionDialog({
       ) {
         toast({
           variant: "destructive",
-          title: "File Too Large",
-          description: "Please select a JSON file smaller than 5MB",
+          title: "文件太大",
+          description: "请选择一个小于 5MB 的 JSON 文件",
         });
       }
     },
@@ -74,8 +74,8 @@ export function ImportCollectionDialog({
     if (!formData.file || !formData.name) {
       toast({
         variant: "destructive",
-        title: "Error",
-        description: "Please select a file and enter a collection name",
+        title: "错误",
+        description: "请选择一个文件并输入一个集合名称",
       });
       return;
     }
@@ -129,8 +129,8 @@ export function ImportCollectionDialog({
             if (!folderResponse.ok) {
               toast({
                 variant: "destructive",
-                title: "Folder Import Failed",
-                description: folderData.error || "An error occurred while importing folders",
+                title: "文件夹导入失败",
+                description: folderData.error || "在导入文件夹时发生错误",
               });
               return;
             }
@@ -143,8 +143,8 @@ export function ImportCollectionDialog({
 
             // Show folder import progress
             toast({
-              title: "Folder Import Progress",
-              description: `Importing folders at level ${level}: Batch ${folderBatches.indexOf(folderBatch) + 1}/${folderBatches.length}`,
+              title: "文件夹导入进度",
+              description: `正在导入第 ${level} 层: 第 ${folderBatches.indexOf(folderBatch) + 1}/${folderBatches.length} 批`,
             });
           }
         }
@@ -276,10 +276,10 @@ export function ImportCollectionDialog({
       });
 
       toast({
-        title: "Import Successful",
-        description: `Collection "${
+        title: "导入成功",
+        description: `集合 "${
           formData.name
-        }" imported successfully in ${totalImportTime.toFixed(2)}s`,
+        }" 已成功导入，用时 ${totalImportTime.toFixed(2)}s`,
       });
 
       if (onSuccess) {
@@ -289,11 +289,11 @@ export function ImportCollectionDialog({
       console.error("Failed to import bookmark collection:", error);
       toast({
         variant: "destructive",
-        title: "Import Failed",
+        title: "导入失败",
         description:
           error instanceof Error
             ? error.message
-            : "An error occurred while importing the bookmark collection",
+            : "在导入书签集合时发生错误",
       });
     } finally {
       setLoading(false);
