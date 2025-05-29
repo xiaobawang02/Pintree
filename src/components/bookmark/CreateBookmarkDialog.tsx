@@ -235,14 +235,14 @@ export function CreateBookmarkDialog({
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>New Bookmark</DialogTitle>
+            <DialogTitle>新建书签</DialogTitle>
           </DialogHeader>
           
           <Alert>
             <AlertDescription>
-              Please create a collection first.
+              请先创建一个书签集合。
               <Link href="/admin/collections" className="ml-2 text-blue-600 hover:underline">
-                Go to create
+                去创建
               </Link>
             </AlertDescription>
           </Alert>
@@ -255,7 +255,7 @@ export function CreateBookmarkDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>New Bookmark</DialogTitle>
+          <DialogTitle>新建书签</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -266,7 +266,7 @@ export function CreateBookmarkDialog({
           )}
           
           <div className="space-y-2">
-            <Label>Folder</Label>
+            <Label>文件夹</Label>
             <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
               <PopoverTrigger asChild>
                 <Button
@@ -275,15 +275,15 @@ export function CreateBookmarkDialog({
                   aria-expanded={popoverOpen}
                   className="w-full justify-between"
                 >
-                  {folders.find(f => f.id === formData.folderId)?.displayName || "Select a folder"}
+                  {folders.find(f => f.id === formData.folderId)?.displayName || "选择一个文件夹"}
                   <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-full p-0">
                 <Command>
-                  <CommandInput placeholder="Search folders..." />
+                  <CommandInput placeholder="搜索文件夹..." />
                   <CommandList>
-                    <CommandEmpty>No folders found</CommandEmpty>
+                    <CommandEmpty>未找到文件夹</CommandEmpty>
                     <CommandGroup>
                       <CommandItem
                         onSelect={() => {
@@ -297,7 +297,7 @@ export function CreateBookmarkDialog({
                             !formData.folderId ? "opacity-100" : "opacity-0"
                           )}
                         />
-                        <span>Root</span>
+                        <span>根目录</span>
                       </CommandItem>
                       {folders.map((folder) => (
                         <CommandItem
@@ -341,7 +341,7 @@ export function CreateBookmarkDialog({
           {hasLoadedInfo && (
             <>
               <div className="space-y-2">
-                <Label>Title</Label>
+                <Label>标题</Label>
                 <Input
                   value={formData.title}
                   onChange={(e) =>
@@ -352,7 +352,7 @@ export function CreateBookmarkDialog({
               </div>
 
               <div className="space-y-2">
-                <Label>Description</Label>
+                <Label>描述</Label>
                 <Textarea
                   value={formData.description}
                   onChange={(e) =>
@@ -362,7 +362,7 @@ export function CreateBookmarkDialog({
               </div>
 
               <div className="space-y-2">
-                <Label>Icon URL</Label>
+                <Label>图标 URL</Label>
                 <div className="flex gap-2">
                   <div className="flex-1">
                     <Input

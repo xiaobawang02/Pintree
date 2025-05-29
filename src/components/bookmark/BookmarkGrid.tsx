@@ -256,7 +256,7 @@ export function BookmarkGrid({
   if (!collectionId) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-muted-foreground">Loading...</p>
+        <p className="text-muted-foreground">加载中...</p>
       </div>
     );
   }
@@ -356,7 +356,7 @@ export function BookmarkGrid({
           {/* 搜索结果显示 */}
           {searchResults.length > 0 ? (
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Search results ({totalResults})</h2>
+              <h2 className="text-xl font-semibold">搜索结果 ({totalResults})</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
                 {searchResults.map((bookmark) => (
                   <BookmarkCard
@@ -372,7 +372,7 @@ export function BookmarkGrid({
             </div>
           ) : inputValue ? (
             <div className="text-center text-gray-500 py-12">
-              No related results found
+              未找到相关结果
             </div>
           ) : (
             // 原有的文件夹和书签显示逻辑，非搜索状态
@@ -415,7 +415,7 @@ export function BookmarkGrid({
                         onClick={() => handleFolderNavigation(subfolder.id)}
                         className="text-green-600 hover:text-green-600"
                       >
-                        View all
+                        查看全部
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
                     )}
@@ -457,17 +457,17 @@ export function BookmarkGrid({
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
-            Previous
+            上一页
           </Button>
           <span className="mx-4">
-            Page {currentPage} of {totalPages}
+            第 {currentPage} 页，共 {totalPages} 页
           </span>
           <Button
             variant="outline"
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >
-            Next
+            下一页
           </Button>
         </div>
       )}

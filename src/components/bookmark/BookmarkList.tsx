@@ -52,7 +52,7 @@ export function BookmarkList({ collectionId }: BookmarkListProps) {
   if (!collectionId) {
     return (
       <div className="text-center text-gray-500 py-4">
-        Please select a bookmark collection
+        请选择一个书签集合
       </div>
     );
   }
@@ -70,7 +70,7 @@ export function BookmarkList({ collectionId }: BookmarkListProps) {
   if (bookmarks.length === 0) {
     return (
       <div className="text-center text-gray-500 py-4">
-        No bookmarks yet
+        暂无书签
       </div>
     );
   }

@@ -179,7 +179,7 @@ export function EditBookmarkDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit Bookmark</DialogTitle>
+          <DialogTitle>编辑书签</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -190,7 +190,7 @@ export function EditBookmarkDialog({
           )}
 
           <div className="space-y-2">
-            <Label>Collection</Label>
+            <Label>书签集合</Label>
             <Select
               value={formData.collectionId}
               onValueChange={(value) => 
@@ -198,7 +198,7 @@ export function EditBookmarkDialog({
               }
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select collection" />
+                <SelectValue placeholder="选择书签集合" />
               </SelectTrigger>
               <SelectContent>
                 {collections?.map((collection) => (
@@ -227,13 +227,13 @@ export function EditBookmarkDialog({
                 onClick={handleGetInfo}
                 disabled={loading}
               >
-                {loading ? "Getting..." : "Get Info"}
+                {loading ? "加载中..." : "获取信息"}
               </Button>
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label>Title</Label>
+            <Label>标题</Label>
             <Input
               value={formData.title}
               onChange={(e) =>
@@ -244,7 +244,7 @@ export function EditBookmarkDialog({
           </div>
 
           <div className="space-y-2">
-            <Label>Description</Label>
+            <Label>描述</Label>
             <Textarea
               value={formData.description}
               onChange={(e) =>
@@ -254,7 +254,7 @@ export function EditBookmarkDialog({
           </div>
 
           <div className="space-y-2">
-            <Label>Icon URL</Label>
+            <Label>图标 URL</Label>
             <div className="flex gap-2">
               <div className="flex-1">
                 <Input
@@ -312,10 +312,10 @@ export function EditBookmarkDialog({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              取消
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Saving..." : "Save"}
+              {loading ? "保存中..." : "保存"}
             </Button>
           </div>
         </form>

@@ -104,23 +104,23 @@ export function EditCollectionDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit Bookmark Collection</DialogTitle>
+          <DialogTitle>编辑书签集合</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">名称</Label>
             <Input
               id="name"
               value={formData.name}
               onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-              placeholder="Enter collection name"
+              placeholder="输入书签集合名称"
               disabled={loading}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">描述</Label>
             <Textarea
               id="description"
               value={formData.description}
@@ -128,7 +128,7 @@ export function EditCollectionDialog({
                   ...prev,
                 description: e.target.value.slice(0, 140) 
               }))}
-              placeholder="Enter collection description"
+              placeholder="输入书签集合描述"
               rows={3}
               className="resize-none"
               maxLength={140}
@@ -143,10 +143,10 @@ export function EditCollectionDialog({
               onClick={() => onOpenChange(false)}
               disabled={loading}
             >
-              Cancel
+              取消
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Saving..." : "Save"}
+              {loading ? "保存中..." : "保存"}
             </Button>
           </div>
         </form>
