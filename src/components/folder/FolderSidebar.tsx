@@ -194,7 +194,7 @@ export function FolderSidebar({
             onClick={() => onFolderSelect(null)}
           >
             <Folder className="h-4 w-4" />
-            Root Folder
+            根目录
           </Button>
           {folderTree.map(folder => renderFolderItem(folder))}
         </div>
