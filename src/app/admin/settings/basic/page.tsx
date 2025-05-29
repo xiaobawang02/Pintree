@@ -240,7 +240,7 @@ export default function BasicSettingsPage() {
                 <Card className="border bg-white">
                   <CardHeader className="border-b">
                     <CardTitle>基础信息</CardTitle>
-                    <CardDescription>Set the basic information of your website</CardDescription>
+                    <CardDescription>设置您的网站基础信息</CardDescription>
                   </CardHeader>
                   <CardContent className="grid gap-4 p-6">
                     <div className="grid gap-2">
@@ -276,7 +276,7 @@ export default function BasicSettingsPage() {
                 <Card className="border bg-white">
                   <CardHeader className="border-b">
                     <CardTitle>统计代码</CardTitle>
-                    <CardDescription>Set the statistics code of your website</CardDescription>
+                    <CardDescription>设置您的网站统计代码</CardDescription>
                   </CardHeader>
                   <CardContent className="grid gap-4 p-6">
                     <div className="grid gap-2">

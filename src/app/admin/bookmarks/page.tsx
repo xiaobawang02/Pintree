@@ -399,13 +399,13 @@ export default function BookmarksPage() {
                 <line x1="12" y1="8" x2="12" y2="12" />
                 <line x1="12" y1="16" x2="12.01" y2="16" />
               </svg>
-              <h3 className="mt-4 text-lg font-semibold">No bookmark collections</h3>
+              <h3 className="mt-4 text-lg font-semibold">没有书签集合</h3>
               <p className="mb-4 mt-2 text-sm text-muted-foreground">
-                Please create a bookmark collection first, then add bookmarks.
+                请先创建一个书签集合，然后添加书签。
               </p>
               <Button asChild>
                 <Link href="/admin/collections">
-                  Create Collection
+                  创建书签集合
                 </Link>
               </Button>
             </div>
@@ -421,7 +421,7 @@ export default function BookmarksPage() {
                 className={!currentFolderId ? "bg-white" : ""}
                 disabled={isNavigating}
               >
-                Root
+                根目录
               </Button>
               {folderPath.map((folder, index) => (
                 <Fragment key={folder.id}>
